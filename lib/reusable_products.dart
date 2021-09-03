@@ -1,15 +1,15 @@
 // this wil hold the product segments
 
 import 'package:flutter/material.dart';
-import 'store_page.dart';
+import 'store_main_page.dart';
 import 'reusable_segment1.dart';
 import 'page_of_products.dart';
 import 'dart:async';
 
 // these are just the other variables to transfer to the product page.
-int priceProduct = 0;
-String nameProduct = 'blank text';
-String imageUrlProduct = 'also Blank text';
+int globalProductPrice = 0;
+String globalProductName = 'blank text';
+String globalProductImageUrl = 'also Blank text';
 
 // These Variables are going to chose what things can or cannot be seen.
 bool sportsBool = false;
@@ -42,9 +42,9 @@ class ReusableProductSegment extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.pushNamed(context, '/ProductPage');
-          priceProduct = productPrice;
-          nameProduct = productName;
-          imageUrlProduct = productImageURL;
+          globalProductPrice = productPrice;
+          globalProductName = productName;
+          globalProductImageUrl = productImageURL;
         },
         child: Container(
           alignment: Alignment.center,
@@ -59,24 +59,30 @@ class ReusableProductSegment extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    productName,
-                    style: TextStyle(
-                      color: Color.fromRGBO(77, 161, 122, 1),
-                      fontSize: 25,
-                    ),
+              Container(
+                margin: const EdgeInsets.only(right: 15.0, left: 15),
+                child: Text(
+                  '\$$productPrice',
+                  style: TextStyle(
+                    color: Color.fromRGBO(77, 161, 122, 1),
+                    fontSize: 25,
                   ),
-                  Text(
-                    '\$$productPrice',
-                    style: TextStyle(
-                      color: Color.fromRGBO(77, 161, 122, 1),
-                      fontSize: 20,
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      productName,
+                      style: TextStyle(
+                        color: Color.fromRGBO(77, 161, 122, 1),
+                        fontSize: 25,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
                 padding: EdgeInsets.only(top: 3, bottom: 3),

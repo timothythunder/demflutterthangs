@@ -3,7 +3,7 @@
 import 'main.dart';
 import 'package:flutter/material.dart';
 import 'reusable_products.dart';
-import 'ad_page.dart';
+import 'ad_main_page.dart';
 import 'main_page.dart';
 import 'reusable_segment.dart';
 import 'reusable_segment1.dart';

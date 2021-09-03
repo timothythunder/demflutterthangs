@@ -14,6 +14,94 @@ class AdPage extends StatefulWidget {
 }
 
 class _AdPageState extends State<AdPage> {
+  void recommendedVisibility() {
+    setState(() {
+      sportsBool = true;
+      gamingBool = true;
+      outdoorsBool = true;
+      moviesBool = true;
+      artBool = true;
+      technologyBool = true;
+    });
+  }
+
+  void sportsVisibility() {
+    setState(() {
+      sportsBool = true;
+      gamingBool = false;
+      outdoorsBool = false;
+      moviesBool = false;
+      artBool = false;
+      technologyBool = false;
+    });
+  }
+
+  void gamingVisibility() {
+    setState(() {
+      sportsBool = false;
+      gamingBool = true;
+      outdoorsBool = false;
+      moviesBool = false;
+      artBool = false;
+      technologyBool = false;
+    });
+  }
+
+  void outdoorsVisibility() {
+    setState(() {
+      sportsBool = false;
+      gamingBool = false;
+      outdoorsBool = true;
+      moviesBool = false;
+      artBool = false;
+      technologyBool = false;
+    });
+  }
+
+  void moviesVisibility() {
+    setState(() {
+      sportsBool = false;
+      gamingBool = false;
+      outdoorsBool = false;
+      moviesBool = true;
+      artBool = false;
+      technologyBool = false;
+    });
+  }
+
+  void artVisibility() {
+    setState(() {
+      sportsBool = false;
+      gamingBool = false;
+      outdoorsBool = false;
+      moviesBool = false;
+      artBool = true;
+      technologyBool = false;
+    });
+  }
+
+  void technologyVisibility() {
+    setState(() {
+      sportsBool = false;
+      gamingBool = false;
+      outdoorsBool = false;
+      moviesBool = false;
+      artBool = false;
+      technologyBool = true;
+    });
+  }
+
+  void otherVisibility() {
+    setState(() {
+      sportsBool = true;
+      gamingBool = true;
+      outdoorsBool = true;
+      moviesBool = true;
+      artBool = true;
+      technologyBool = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,42 +178,47 @@ class _AdPageState extends State<AdPage> {
                     ),
                   ),
                   ReusableSegment(
+                    segmentFunction: recommendedVisibility,
                     segmentText: 'Recommended',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: sportsVisibility,
                     segmentText: 'Sports',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: gamingVisibility,
                     segmentText: 'Gaming',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: outdoorsVisibility,
                     segmentText: 'Outdoors',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
-                    segmentText: 'Movies',
-                    segmentColor: Color.fromRGBO(8, 80, 77, 1),
-                  ),
-                  ReusableSegment(
+                    segmentFunction: artVisibility,
                     segmentText: 'Art',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: technologyVisibility,
                     segmentText: 'Technology',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: otherVisibility,
                     segmentText: 'Segment 9',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: otherVisibility,
                     segmentText: 'Segment 10',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),
                   ReusableSegment(
+                    segmentFunction: otherVisibility,
                     segmentText: 'Segment 11',
                     segmentColor: Color.fromRGBO(8, 80, 77, 1),
                   ),

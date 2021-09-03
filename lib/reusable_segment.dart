@@ -5,16 +5,19 @@ import 'package:flutter/material.dart';
 String appBarTitle = 'potato';
 
 class ReusableSegment extends StatelessWidget {
-  ReusableSegment(
-      {@required this.segmentText,
-      this.segmentColor,
-      this.segmentImage,
-      this.imageVisibility});
+  ReusableSegment({
+    @required this.segmentText,
+    this.segmentColor,
+    this.segmentImage,
+    this.imageVisibility,
+    this.segmentFunction,
+  });
 
   final String segmentText;
   final Color segmentColor;
   final String segmentImage;
   final bool imageVisibility;
+  final segmentFunction;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +29,7 @@ class ReusableSegment extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, '/PageOfAds');
         appBarTitle = segmentText;
+        segmentFunction();
       },
       child: Container(
         alignment: Alignment.center,

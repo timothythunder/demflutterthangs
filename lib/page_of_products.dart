@@ -18,7 +18,7 @@ class _PageOfProductsState extends State<PageOfProducts> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          appBarTitle,
+          productAppBarTitle,
           style: TextStyle(fontSize: 25),
         ),
         toolbarHeight: 50,
@@ -44,24 +44,24 @@ class _PageOfProductsState extends State<PageOfProducts> {
             ),
             ReusableProductSegment(
               productVisibility: sportsBool,
-              productName: 'Nike Football',
-              productPrice: 40,
+              productName: 'Nike LeBron 17',
+              productPrice: 130,
               productImageURL:
-                  'https://images-na.ssl-images-amazon.com/images/I/91VfO4p86nL._AC_SL1500_.jpg',
+                  'https://images.stockx.com/images/Nike-LeBron-17-Infrared-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1607673912bbbbbb',
             ),
             ReusableProductSegment(
               productVisibility: outdoorsBool,
-              productName: 'Camping Multitool',
-              productPrice: 15,
+              productName: 'Milwauke M18 Trimmer',
+              productPrice: 250,
               productImageURL:
-                  'https://images-na.ssl-images-amazon.com/images/I/61Ym9dmeljL._AC_SL1500_.jpg',
+                  'https://media.suthlbr.com/products/images/18446/1666775_ep_1612208700_5.jpg',
             ),
             ReusableProductSegment(
               productVisibility: artBool,
-              productName: 'Paintbrush Set',
-              productPrice: 15,
+              productName: 'Adobe illustrator 12 Month subscription',
+              productPrice: 20,
               productImageURL:
-                  'https://images-na.ssl-images-amazon.com/images/I/81f9JhZ1V-S._AC_SL1500_.jpg',
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm3HDkhBh1xAESUGUQgY5Zji7iJEKatlvnKUvYiIJDqDBKoAWmDSt-AXBWWmDHGesRAwg&usqp=CAU',
             )
           ],
         ),

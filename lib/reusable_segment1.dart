@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-String appBarTitle = 'potato';
+String productAppBarTitle = 'potato';
 
 class ReusableSegment1 extends StatelessWidget {
   ReusableSegment1(
@@ -29,7 +29,7 @@ class ReusableSegment1 extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.pushNamed(context, '/PageOfProducts');
-        appBarTitle = segmentText;
+        productAppBarTitle = segmentText;
         segmentFunction();
       },
       child: Container(

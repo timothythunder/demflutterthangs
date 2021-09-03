@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.i_hope_i_can_change_this_name">
    <application
-        android:label="i_hope_i_can_change_this_name"
+        android:label="Rolands Cool App"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

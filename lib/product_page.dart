@@ -14,7 +14,7 @@ class _ProductPageState extends State<ProductPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          nameProduct,
+          globalProductName,
           style: TextStyle(fontSize: 25),
         ),
         toolbarHeight: 50,
@@ -37,7 +37,7 @@ class _ProductPageState extends State<ProductPage> {
                 ),
               ),
               alignment: Alignment.center,
-              child: Image.network(imageUrlProduct),
+              child: Image.network(globalProductImageUrl),
             ),
           ),
           Row(
@@ -46,7 +46,7 @@ class _ProductPageState extends State<ProductPage> {
                 margin: const EdgeInsets.only(left: 23),
                 // this one holds the Items price
                 child: Text(
-                  '\$ $priceProduct',
+                  '\$ $globalProductPrice',
                   style: TextStyle(
                     fontSize: 42,
                     color: Color.fromRGBO(77, 161, 122, 1),
@@ -80,7 +80,26 @@ class _ProductPageState extends State<ProductPage> {
             width: screenWidth,
             height: 60,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: const Text('Item Added To Cart'),
+                    content:
+                        const Text('This Item Has Been Added To Your Cart'),
+                    actions: <Widget>[
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'Cancel'),
+                        child: const Text('Cancel'),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        child: const Text('OK'),
+                      ),
+                    ],
+                  ),
+                );
+              },
               child: Text(
                 'Add To Cart',
                 style: TextStyle(
@@ -103,7 +122,25 @@ class _ProductPageState extends State<ProductPage> {
             width: screenWidth,
             height: 60,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: const Text('Item Saved'),
+                    content: const Text('This Item Has Been Saved For Later'),
+                    actions: <Widget>[
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'Cancel'),
+                        child: const Text('Cancel'),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        child: const Text('OK'),
+                      ),
+                    ],
+                  ),
+                );
+              },
               child: Text(
                 'Save For Later',
                 style: TextStyle(

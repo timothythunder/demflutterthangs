@@ -21,8 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  chewie: ^1.2.2
+
+  youtube_player_flutter: ^8.0.0
   video_player: ^2.1.6
+
+
+
   flutter:
     sdk: flutter
 
@@ -37,6 +41,14 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_launcher_icons: ^0.9.2
+
+flutter_icons:
+  image_path: "assets/images/NicePng_emma-stone-png_679892.png"
+  android: true
+  ios: true
+
 
 
 # For information on the generic Dart part of this file, see the

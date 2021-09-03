@@ -1,6 +1,6 @@
-import 'package:i_hope_i_can_change_this_name/ad_page.dart';
+import 'package:i_hope_i_can_change_this_name/ad_main_page.dart';
 import 'package:i_hope_i_can_change_this_name/profile_page.dart';
-import 'package:i_hope_i_can_change_this_name/store_page.dart';
+import 'package:i_hope_i_can_change_this_name/store_main_page.dart';
 
 import 'main.dart';
 import 'package:flutter/material.dart';
